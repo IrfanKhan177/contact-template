@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="" content="">
+  <title>Video</title>
+  <style type="text/css" media="all">
+    .bd {
+      display: flex;
+      justify-content: center;
+    }
+    .bt {
+      background-color: white;
+      border: none;
+      margin-top: 40px;
+      padding: 20px;
+
+    }
+    .bt1 {
+      margin-left: 25px;
+      background-color: white;
+      border: none;
+      margin-top: 40px;
+      padding: 20px;
+    }
+    .img {
+      height: 250px;
+      width: 400px;
+      border-radius: 10px;
+
+    }
+    .form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    #fn {
+      border-radius: 5px;
+      outline-color: blue;
+      border: 1px solid gray;
+      padding-bottom: 5px;
+      padding-top: 5px;
+
+    }
+    #el {
+      border-radius: 5px;
+      outline-color: blue;
+      border: 1px solid gray;
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+    #pon {
+      border-radius: 5px;
+      outline-color: blue;
+      border: 1px solid gray;
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+    #sub {
+      border: none;
+      background-color: #43c9eb;
+      border-radius: 6px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      width: 60px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div>
+ 
+    <div>
+      <img class="img" src="image/laptop.jpg" alt="" />
+    </div>
+
+    <div class="bd">
+
+
+      <button type="submit" id="bb" onclick="ob()" class="bt">Overview</button>
+      <button type="submit" id="bb1" onclick="con()" class="bt1">Contact</button>
+    </div>
+    <div class="root" id="root">
+
+    </div>
+  </div>
+
+  <script type="text/javascript" charset="utf-8">
+    const r = document.getElementById("root");
+    const bb = document.getElementById("bb");
+    const bb1 = document.getElementById("bb1");
+    let over = `
+    
+    <h1>Overview</h1>
+    <p>
+    A laptop, laptop computer, or notebook computer is a small, portable personal computer (PC) with a screen and alphanumeric keyboard. These typically have a clam shell form factor with the screen mounted on the inside of the upper lid and the keyboard on the inside of the lower lid, although 2-in-1 PCs with a detachable keyboard are often marketed as laptops or as having a laptop mode. Laptops are folded shut for transportation, and thus are suitable for mobile use.[1] Its name comes from lap, as it was deemed practical to be placed on a person's lap when being used. Today, laptops are used in a variety of settings, such as at work, in education, for playing games, web browsing, for personal multimedia, and general home computer use.
+    </p>
+    `;
+    let contact = `
+    <form class="form" action="/con" method="post" accept-charset="utf-8">
+    <input type="text" name="fn" id="fn" value="" placeholder="Type your full name"/><br>
+    <input type="email" name="el" id="el" value="" placeholder="Type your email" /><br>
+    <input type="number" name="pon" id="pon" value="" placeholder="Type your phone number"/><br>
+
+    <input type="submit" name="" id="sub" value="Submit" />
+    </form>
+
+    `;
+    const hov = "red";
+    const hov1 = "black"
+    bb.style.color = hov;
+    r.innerHTML = over;
+    function ob() {
+      r.innerHTML = over;
+      bb.style.color = hov;
+      bb1.style.color = hov1;
+    }
+    function con() {
+      r.innerHTML = contact;
+      bb1.style.color = hov;
+      bb.style.color = hov1;
+    }
+  </script>
+</body>
+</html>
